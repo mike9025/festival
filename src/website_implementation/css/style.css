@@ -181,13 +181,15 @@
   }
   .card-content .fav_btn{
     grid-row: 1;
-    color: #fff;
+    color: #000;
     padding: 8px 16px;
-    background-color: #047857;
+    background-color: #fff;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 8px;
+    border: 2px solid #e1dbdb;
     margin-top: 16px;
     align-self: flex-start;
+    text-align: center;
   }
   h1 {
     margin-left: 16px;
