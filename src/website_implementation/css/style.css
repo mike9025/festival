@@ -175,4 +175,6 @@
     margin-top: 16px;
     align-self: flex-end;
   }
-
+  h1 {
+    margin-left: 16px;
+  }
