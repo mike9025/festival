@@ -15,13 +15,13 @@
     }
 
     .navbar a:hover {
-      background-color: #55bb54;
-      color: rgb(225, 225, 225);
+     
+      color: rgba(0, 0, 0, 0.193);
     }
 
     .navbar a.active {
       background-color: #04AA6D;
-      color: white;
+      color: rgba(255, 255, 255, 0.974);
     }
 
     .navbar a.logo {
