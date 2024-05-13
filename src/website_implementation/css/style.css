@@ -3,6 +3,10 @@
     .navbar {
       background-color: #ffffff;
       overflow: hidden;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      
     }
 
     .navbar a {
@@ -137,6 +141,7 @@
       border-radius: 4px;
       margin-top: 16px;
       align-self: flex-end;
+      cursor: pointer;
     }
 
     .card-content .fav_btn {
