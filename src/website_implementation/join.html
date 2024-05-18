@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jambo - events</title>
+    <link rel="stylesheet" href="css/event_detail.css">
+    <script src="https://kit.fontawesome.com/a7b9dfbf73.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="home.html" class="logo">Jambo</a>
+        <a class="active" href="#home">Login</a>
+        <a href="" class="chat_btn">
+            <i class="fa fa-commenting-o"></i>
+        </a>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." name="search">
+        </div>
+        <a href="#news">Groups</a>
+        <a href="event.html">Events</a>
+
+    </div>
+    <h1>join the event</h1>
+    <div class="event-detail">
+
+        <p id="eventName"></p>
+        <form id="joinForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required><br>
+            <button type="submit">Submit</button>
+        </form>
+
+    </div>
+    <script>
+        // Retrieve the value from the session storage
+        var storedName = sessionStorage.getItem('event_name');
+        document.getElementById('eventName').innerText = 'Name: ' + storedName;
+
+        // Handle form submission
+        document.getElementById('joinForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+            const postCommunityEventMethod = 'POST';
+
+            // Collect form data
+            var formdata = new FormData();
+            formdata.append("name", document.getElementById('name').value);
+            formdata.append("location", "Morningside Forest");
+            formdata.append("organiser", "Morningside Community Wellness Collective");
+            formdata.append("event_type", "Group Activity");
+            formdata.append("description", "Doing yoga in a tree");
+            formdata.append("date_time", "2023-10-21 17:30");
+            formdata.append("website_code", "Pete123");
+            const baseURL = "https://damp-castle-86239-1b70ee448fbd.herokuapp.com/decoapi/community_events/";
+            const requestOptions = {
+                method: postCommunityEventMethod,
+                body: formdata,
+                redirect: 'follow'
+            }
+            // Send POST request to API
+            fetch(baseURL, requestOptions)
+                .then(response => response.text())
+                .then(result => {
+
+                    alert(result);
+                    console.log(result);
+
+                })
+                .catch(error => {
+                    console.log('error', error);
+                    alert('An error occurred. Please try again.');
+                });
+        });
+    </script>
+
+</body>

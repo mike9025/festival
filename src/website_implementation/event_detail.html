@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Jambo - events</title>
+    <link rel="stylesheet" href="css/event_detail.css">
+    <script src="https://kit.fontawesome.com/a7b9dfbf73.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="home.html" class="logo">Jambo</a>
+        <a class="active" href="#home">Login</a>
+        <a href="" class="chat_btn">
+            <i class="fa fa-commenting-o"></i>
+        </a>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." name="search">
+        </div>
+        <a href="#news">Groups</a>
+        <a href="event.html">Events</a>
+
+    </div>
+    <h1>Event detail</h1>
+    <div class="event-detail">
+        <img src="" alt="Event Image" id="eventImage">
+        <p id="eventName"></p>
+        <p id="eventDescription"></p>
+        <p id="eventLocation"></p>
+        <p id="eventOrganizer"></p>
+        <p id="eventType"></p>
+    </div>
+    <script>
+        // Retrieve the value from the session storage
+        var storedName = sessionStorage.getItem('event_name');
+        var storedPhoto = sessionStorage.getItem('event_photo');
+        var storedDescription = sessionStorage.getItem('event_description');
+        var storedLocation = sessionStorage.getItem('event_location');
+        var storedOrganizer = sessionStorage.getItem('event_organizer');
+        var storedType = sessionStorage.getItem('event_type');
+
+        // Display the value on the page
+
+        var fakeDescription = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Sit amet venenatis urna cursus eget nunc scelerisque. Lacus sed viverra tellus in hac. Arcu risus quis varius quam quisque id diam vel. Volutpat commodo sed egestas egestas fringilla. Aliquet sagittis id consectetur purus ut faucibus. Ut diam quam nulla porttitor massa id. Tellus elementum sagittis vitae et leo duis. Aenean vel elit scelerisque mauris pellentesque pulvinar pellentesque habitant. Sed vulputate mi sit amet mauris commodo quis imperdiet. Tempus quam pellentesque nec nam aliquam. Mus mauris vitae ultricies leo integer. Nunc lobortis mattis aliquam faucibus purus in massa tempor nec. Facilisis gravida neque convallis a cras semper auctor neque. Vivamus at augue eget arcu dictum varius duis at consectetur. Lectus proin nibh nisl condimentum. Tellus mauris a diam maecenas sed. Consequat interdum varius sit amet. Blandit volutpat maecenas volutpat blandit aliquam etiam. Diam sit amet nisl suscipit. Sed blandit libero volutpat sed cras ornare arcu. Tellus integer feugiat scelerisque varius morbi enim. Ut lectus arcu bibendum at varius vel pharetra vel. Amet justo donec enim diam vulputate ut pharetra sit amet. Commodo elit at imperdiet dui accumsan. Ultricies lacus sed turpis tincidunt id aliquet. At elementum eu facilisis sed odio morbi quis. Sagittis orci a scelerisque purus semper. Diam maecenas sed enim ut sem viverra aliquet. At quis risus sed vulputate odio ut enim blandit. Integer eget aliquet nibh praesent tristique. Turpis massa sed elementum tempus egestas sed sed. Habitant morbi tristique senectus et netus et. Neque ornare aenean euismod elementum nisi quis eleifend quam. At tempor commodo ullamcorper a lacus vestibulum. Pellentesque elit ullamcorper dignissim cras tincidunt lobortis. Lectus mauris ultrices eros in. Tristique senectus et netus et malesuada fames ac. Bibendum at varius vel pharetra vel turpis. Nunc vel risus commodo viverra. Quam quisque id diam vel quam elementum pulvinar etiam non. Sagittis vitae et leo duis. Sed odio morbi quis commodo. In egestas erat imperdiet sed euismod nisi porta lorem. Eros in cursus turpis massa tincidunt dui. Enim sit amet venenatis urna cursus. Lorem ipsum dolor sit amet consectetur. Justo donec enim diam vulputate ut. Tellus elementum sagittis vitae et leo duis. Morbi enim nunc faucibus a.'
+
+        document.getElementById('eventName').innerText = 'Name: ' + storedName;
+        document.getElementById('eventImage').src = storedPhoto;
+        document.getElementById('eventDescription').innerText = 'Description: ' + fakeDescription;
+        document.getElementById('eventLocation').innerText = 'Location: ' + storedLocation;
+        document.getElementById('eventOrganizer').innerText = 'Organizer: ' + storedOrganizer;
+        document.getElementById('eventType').innerText = 'Type: ' + storedType;
+    </script>
+
+</body>

@@ -1,0 +1,90 @@
+.navbar {
+    background-color: #ffffff;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    height: 80px;
+    width: 100%;
+  
+  }
+  
+  body{
+  padding-top: 80px;
+  }
+  
+  .navbar a {
+    float: right;
+    display: block;
+    color: rgb(20, 16, 16);
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  .navbar a:hover {
+  
+    color: rgba(0, 0, 0, 0.193);
+  }
+  
+  .navbar a.active {
+    background-color: #04AA6D;
+    color: rgba(255, 255, 255, 0.974);
+  }
+  
+  .navbar a.logo {
+    float: left;
+    font-size: 2em;
+    font-weight: 800;
+    padding-bottom: 0px;
+    padding-top: 0px;
+  }
+  
+  .navbar a.chat_btn {
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+  
+  .navbar a.chat_btn:hover {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+  }
+  
+  
+  .search-container {
+    float: right;
+  }
+  
+  .search-container input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border-radius: 8px;
+    border-color: #e2e0e0;
+  }
+
+  .event-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.event-detail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    height: 200px; /* Set the height to make the image smaller */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+
+.event-detail p {
+    margin: 10px 0;
+    color: #555;
+    text-align: center;
+    line-height: 1.5;
+}

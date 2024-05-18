@@ -22,16 +22,31 @@ fetch(urlWithParams, requestOptions)
             if (event.photo == null) {
                 event.photo = "https://deco7140sem22023.s3.amazonaws.com/event_photos/orca_YQtzNXS.jpg"
             }
+
             const markup = `
-               <div class="card">
+               <div class="card" >
                    <img src="${event.photo}" alt="${event.name}">
-                   <div class="container">
+                   <div class="container" onclick="goToDetail()">
                        <h4><b>${event.name}</b></h4>
                        <p>${event.description}</p>
+                       
                    </div>
+                   <button class="join-btn" onclick="goToJoin()" >Join</button>
                </div>
            `;
-            document.querySelector('.card-container').insertAdjacentHTML('beforeend', markup);
-        });
+            const cardContainer = document.querySelector('.card-container');
+            cardContainer.insertAdjacentHTML('beforeend', markup);
 
+          
+            
+        });
     });
+    
+    function goToJoin() {
+       
+        window.location.href = 'join.html';
+    }
+    function goToDetail() {
+        
+        window.location.href = 'event_detail.html';
+    }
