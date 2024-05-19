@@ -30,6 +30,8 @@
         <p id="eventOrganizer"></p>
         <p id="eventType"></p>
     </div>
+    <button id="joinButton" class="join-btn" onclick="goToJoin()">Join Event</button>
+
     <script>
         // Retrieve the value from the session storage
         var storedName = sessionStorage.getItem('event_name');
@@ -49,6 +51,11 @@
         document.getElementById('eventLocation').innerText = 'Location: ' + storedLocation;
         document.getElementById('eventOrganizer').innerText = 'Organizer: ' + storedOrganizer;
         document.getElementById('eventType').innerText = 'Type: ' + storedType;
+
+        function goToJoin() {
+
+            window.location.href = 'join.html';
+        }
     </script>
 
 </body>
