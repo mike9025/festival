@@ -2,44 +2,42 @@
 <html>
 
 <head>
-    <title>Jambo - events</title>
-    <link rel="stylesheet" href="css/event_detail.css">
+    <title>Jambo - Join the Event</title>
+    <link rel="stylesheet" href="css/join.css">
     <script src="https://kit.fontawesome.com/a7b9dfbf73.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <div class="navbar">
-        <a href="home.html" class="logo">Jambo</a>
-        <a class="active" href="#home">Login</a>
-        <a href="" class="chat_btn">
+        <a href="home.html" class="logo" aria-label="Jambo Home">Jambo</a>
+        <a class="active" href="#home" aria-label="Login">Login</a>
+        <a href="" class="chat_btn" aria-label="Chat">
             <i class="fa fa-commenting-o"></i>
         </a>
         <div class="search-container">
-            <input type="text" placeholder="Search..." name="search">
+            <input type="text" placeholder="Search..." name="search" aria-label="Search">
         </div>
-        <a href="#news">Groups</a>
-        <a href="event.html">Events</a>
-
+        <a href="#news" aria-label="Groups">Groups</a>
+        <a href="event.html" aria-label="Events">Events</a>
     </div>
-    <h1>join the event</h1>
+    <h1 class="main-title">Join the Event</h1>
     <div class="event-detail">
-
-        <p id="eventName"></p>
-        <form id="joinForm">
+        <h2 id="eventName" class="event-name"></h2>
+        <form id="joinForm" class="form" aria-label="Join Event Form">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required><br>
+            <input type="text" id="name" name="name" required aria-required="true"><br>
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required><br>
+            <input type="email" id="email" name="email" required aria-required="true"><br>
             <label for="phone">Phone:</label>
-            <input type="tel" id="phone" name="phone" required><br>
-            <button type="submit">Submit</button>
+            <input type="tel" id="phone" name="phone" required aria-required="true"><br>
+            <button type="submit" class="submit-btn" aria-label="Submit Join Form">Submit</button>
         </form>
-
     </div>
+
     <script>
         // Retrieve the value from the session storage
         var storedName = sessionStorage.getItem('event_name');
-        document.getElementById('eventName').innerText = 'Name: ' + storedName;
+        document.getElementById('eventName').innerText = storedName;
 
         // Handle form submission
         document.getElementById('joinForm').addEventListener('submit', function (event) {
@@ -60,15 +58,13 @@
                 method: postCommunityEventMethod,
                 body: formdata,
                 redirect: 'follow'
-            }
+            };
             // Send POST request to API
             fetch(baseURL, requestOptions)
                 .then(response => response.text())
                 .then(result => {
-
                     alert(result);
                     console.log(result);
-
                 })
                 .catch(error => {
                     console.log('error', error);
@@ -76,5 +72,6 @@
                 });
         });
     </script>
-
 </body>
+
+</html>

@@ -9,30 +9,30 @@
 
 <body>
     <div class="navbar">
-        <a href="home.html" class="logo">Jambo</a>
-        <a class="active" href="#home">Login</a>
-        <a href="" class="chat_btn">
+        <a href="home.html" class="logo" aria-label="Jambo Home">Jambo</a>
+        <a class="active" href="#home" aria-label="Login">Login</a>
+        <a href="" class="chat_btn" aria-label="Chat">
             <i class="fa fa-commenting-o"></i>
         </a>
         <div class="search-container">
-            <input type="text" placeholder="Search..." name="search">
+            <input type="text" placeholder="Search..." name="search" aria-label="Search">
         </div>
-        <a href="group.html">Groups</a>
-        <a href="event.html">Events</a>
-
+        <a href="group.html" aria-label="Groups">Groups</a>
+        <a href="event.html" aria-label="Events">Events</a>
     </div>
     <h1>Events:</h1>
     <div id="eventTemplate" class="card" style="display: none;">
-        <img src="" alt="">
+        <img src="" alt="" aria-hidden="true">
         <div class="container">
             <h4><b></b></h4>
             <p></p>
         </div>
-        <button   class="join-btn">Join</button>
+        <button class="join-btn" aria-label="Join Event">Join</button>
     </div>
-    <div class="card-container" >
-        
-    </div>
+    <div class="card-container"></div>
     
     <script src="js/event.js"></script>
 </body>
+
+</html>
+

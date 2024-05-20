@@ -1,154 +1,146 @@
 <!DOCTYPE html>
 <html>
 
-
 <head>
-  <title>Jambo - the best place to find events</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://kit.fontawesome.com/a7b9dfbf73.js" crossorigin="anonymous"></script>
-
-
+    <title>Jambo - the best place to find events</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/a7b9dfbf73.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <div class="navbar">
-    <a href="home.html" class="logo">Jambo</a>
-    <a class="active" href="#home">Login</a>
-    <a href="" class="chat_btn">
-      <i class="fa fa-commenting-o"></i>
-    </a>
-    <div class="search-container">
-      <input type="text" placeholder="Search..." name="search">
-    </div>
-    <a href="group.html">Groups</a>
-    <a href="event.html">Events</a>
-
-  </div>
-
-  <h1>Recommend for you</h1>
-  <div class="card-container">
-    <div class="card">
-      <img onclick="goToDetail()" src="media/yoga1.jpeg" alt="this is a woman doing yoga">
-      <div class="card-content" onclick="goToDetail()">
-        <div class="title-grid">
-          <h3>Outdoor Yoga Class</h3>
-          <h3 class="price">$0</h3>
+    <div class="navbar">
+        <a href="home.html" class="logo" aria-label="Jambo Home">Jambo</a>
+        <a class="active" href="#home" aria-label="Login">Login</a>
+        <a href="" class="chat_btn" aria-label="Chat">
+            <i class="fa fa-commenting-o"></i>
+        </a>
+        <div class="search-container">
+            <input type="text" placeholder="Search..." name="search" aria-label="Search">
         </div>
-        <p>
-          Turn down the world's noise and correct with your inner self
-        </p>
-        <div class="button-grid">
-          <a href="" class="fav_btn">
-            <i class="fa-regular fa-heart"></i>
-          </a>
-          <a href="join.html" class="btn">Join</a>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img onclick="goToDetail()" src="media/yoga2.jpeg" alt="this is a woman doing yoga">
-      <div class="card-content" onclick="goToDetail()">
-        <div class="title-grid">
-          <h3>Outdoor Yoga Class</h3>
-          <h3 class="price">$0</h3>
-        </div>
-        <p>
-          Turn down the world's noise and correct with your inner self
-        </p>
-        <div class="button-grid">
-          <a href="" class="fav_btn">
-            <i class="fa-regular fa-heart"></i>
-          </a>
-          <a href="join.html" class="btn">Join</a>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img onclick="goToDetail()" src="media/yoga3.jpeg" alt="this is a woman doing yoga">
-      <div class="card-content" onclick="goToDetail()">
-        <div class="title-grid">
-          <h3>Outdoor Yoga Class</h3>
-          <h3 class="price">$0</h3>
-        </div>
-        <p>
-          Turn down the world's noise and correct with your inner self
-        </p>
-        <div class="button-grid">
-          <a href="" class="fav_btn">
-            <i class="fa-regular fa-heart"></i>
-          </a>
-          <a href="join.html" class="btn">Join</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <h1>Nearby</h1>
-  <div class="card-container">
-    <div class="card">
-      <img onclick="goToDetail()" src="media/yoga1.jpeg" alt="this is a woman doing yoga">
-      <div class="card-content" onclick="goToDetail()">
-        <div class="title-grid">
-          <h3>Outdoor Yoga Class</h3>
-          <h3 class="price">$0</h3>
-        </div>
-        <p>
-          Turn down the world's noise and correct with your inner self
-        </p>
-        <div class="button-grid">
-          <a href="" class="fav_btn">
-            <i class="fa-regular fa-heart"></i>
-          </a>
-          <a href="join.html" class="btn">Join</a>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img onclick="goToDetail()" src="media/yoga2.jpeg" alt="this is a woman doing yoga">
-      <div class="card-content" onclick="goToDetail()">
-        <div class="title-grid">
-          <h3>Outdoor Yoga Class</h3>
-          <h3 class="price">$0</h3>
-        </div>
-        <p>
-          Turn down the world's noise and correct with your inner self
-        </p>
-        <div class="button-grid">
-          <a href="" class="fav_btn">
-            <i class="fa-regular fa-heart"></i>
-          </a>
-          <a href="join.html" class="btn">Join</a>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <img onclick="goToDetail()" src="media/yoga3.jpeg" alt="this is a woman doing yoga">
-      <div class="card-content" onclick="goToDetail()">
-        <div class="title-grid">
-          <h3>Outdoor Yoga Class</h3>
-          <h3 class="price">$0</h3>
-        </div>
-        <p>
-          Turn down the world's noise and correct with your inner self
-        </p>
-        <div class="button-grid">
-          <a href="" class="fav_btn">
-            <i class="fa-regular fa-heart"></i>
-          </a>
-          <a href="join.html" class="btn">Join</a>
-        </div>
-      </div>
+        <a href="group.html" aria-label="Groups">Groups</a>
+        <a href="event.html" aria-label="Events">Events</a>
     </div>
 
+    <h1>Recommend for you</h1>
+    <div class="card-container">
+        <div class="card">
+            <img onclick="goToDetail()" src="media/yoga1.jpeg" alt="Outdoor Yoga Class" aria-label="Image of a woman doing yoga">
+            <div class="card-content" onclick="goToDetail()">
+                <div class="title-grid">
+                    <h3>Outdoor Yoga Class</h3>
+                    <h3 class="price">$0</h3>
+                </div>
+                <p>
+                    Turn down the world's noise and connect with your inner self
+                </p>
+                <div class="button-grid">
+                    <a href="" class="fav_btn" aria-label="Favorite">
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                    <a href="join.html" class="btn" aria-label="Join Event">Join</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img onclick="goToDetail()" src="media/yoga2.jpeg" alt="Outdoor Yoga Class" aria-label="Image of a woman doing yoga">
+            <div class="card-content" onclick="goToDetail()">
+                <div class="title-grid">
+                    <h3>Outdoor Yoga Class</h3>
+                    <h3 class="price">$0</h3>
+                </div>
+                <p>
+                    Turn down the world's noise and connect with your inner self
+                </p>
+                <div class="button-grid">
+                    <a href="" class="fav_btn" aria-label="Favorite">
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                    <a href="join.html" class="btn" aria-label="Join Event">Join</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img onclick="goToDetail()" src="media/yoga3.webp" alt="Outdoor Yoga Class" aria-label="Image of a woman doing yoga">
+            <div class="card-content" onclick="goToDetail()">
+                <div class="title-grid">
+                    <h3>Outdoor Yoga Class</h3>
+                    <h3 class="price">$0</h3>
+                </div>
+                <p>
+                    Turn down the world's noise and connect with your inner self
+                </p>
+                <div class="button-grid">
+                    <a href="" class="fav_btn" aria-label="Favorite">
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                    <a href="join.html" class="btn" aria-label="Join Event">Join</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-
-  </div>
-  </div>
-  <script>
-    function goToDetail() {
-      window.location.href = "event_detail.html";
-
-    }
-  </script>
+    <h1>Nearby</h1>
+    <div class="card-container">
+        <div class="card">
+            <img onclick="goToDetail()" src="media/yoga1.jpeg" alt="Outdoor Yoga Class" aria-label="Image of a woman doing yoga">
+            <div class="card-content" onclick="goToDetail()">
+                <div class="title-grid">
+                    <h3>Outdoor Yoga Class</h3>
+                    <h3 class="price">$0</h3>
+                </div>
+                <p>
+                    Turn down the world's noise and connect with your inner self
+                </p>
+                <div class="button-grid">
+                    <a href="" class="fav_btn" aria-label="Favorite">
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                    <a href="join.html" class="btn" aria-label="Join Event">Join</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img onclick="goToDetail()" src="media/yoga2.jpeg" alt="Outdoor Yoga Class" aria-label="Image of a woman doing yoga">
+            <div class="card-content" onclick="goToDetail()">
+                <div class="title-grid">
+                    <h3>Outdoor Yoga Class</h3>
+                    <h3 class="price">$0</h3>
+                </div>
+                <p>
+                    Turn down the world's noise and connect with your inner self
+                </p>
+                <div class="button-grid">
+                    <a href="" class="fav_btn" aria-label="Favorite">
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                    <a href="join.html" class="btn" aria-label="Join Event">Join</a>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <img onclick="goToDetail()" src="media/yoga3.webp" alt="Outdoor Yoga Class" aria-label="Image of a woman doing yoga">
+            <div class="card-content" onclick="goToDetail()">
+                <div class="title-grid">
+                    <h3>Outdoor Yoga Class</h3>
+                    <h3 class="price">$0</h3>
+                </div>
+                <p>
+                    Turn down the world's noise and connect with your inner self
+                </p>
+                <div class="button-grid">
+                    <a href="" class="fav_btn" aria-label="Favorite">
+                        <i class="fa-regular fa-heart"></i>
+                    </a>
+                    <a href="join.html" class="btn" aria-label="Join Event">Join</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function goToDetail() {
+            window.location.href = "event_detail.html";
+        }
+    </script>
 </body>
 
 </html>

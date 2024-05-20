@@ -20,12 +20,12 @@ fetch(urlWithParams, requestOptions)
         data.forEach(event => {
             photo = event.photo
             if (event.photo == null) {
-                event.photo = "https://deco7140sem22023.s3.amazonaws.com/event_photos/orca_YQtzNXS.jpg"
+                photo = "https://deco7140sem22023.s3.amazonaws.com/event_photos/orca_YQtzNXS.jpg"
             }
 
             const markup = `
                <div class="card" >
-                   <img src="${event.photo}" alt="${event.name}">
+                   <img src="${photo}" alt="${event.name}">
                    <div class="container" onclick="goToDetail()">
                        <h4><b>${event.name}</b></h4>
                        <p>${event.description}</p>
@@ -37,16 +37,22 @@ fetch(urlWithParams, requestOptions)
             const cardContainer = document.querySelector('.card-container');
             cardContainer.insertAdjacentHTML('beforeend', markup);
 
-          
-            
+            sessionStorage.setItem('event_name', event.name);
+           
+            sessionStorage.setItem('event_photo', photo);
+            sessionStorage.setItem('event_description', event.description);
+            sessionStorage.setItem('event_location', event.location);
+            sessionStorage.setItem('event_organizer', event.organizer);
+            sessionStorage.setItem('event_type', event.event_type);
+
         });
     });
-    
-    function goToJoin() {
-       
-        window.location.href = 'join.html';
-    }
-    function goToDetail() {
-        
-        window.location.href = 'event_detail.html';
-    }
+
+function goToJoin() {
+
+    window.location.href = 'join.html';
+}
+function goToDetail() {
+
+    window.location.href = 'event_detail.html';
+}
